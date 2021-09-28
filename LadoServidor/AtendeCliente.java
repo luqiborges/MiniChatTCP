@@ -44,7 +44,6 @@ public class AtendeCliente implements Runnable {
           nomeMensagemDestinatario = ouvirCliente.next();
 
         } else {
-          System.out.println("Opa");
           PrintStream enviarMsgDestinatario = new PrintStream(
               Servidor.clientesConectados.get(idDestinatario).getOutputStream());
           enviarMsgDestinatario.println(mensagem);
